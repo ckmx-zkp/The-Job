@@ -4,24 +4,126 @@
 <h1>礦ision Build Log</h1>
 <h2>Project:</h2>
 E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\Haohai_key.uvproj
-Project File Date:  03/26/2015
+Project File Date:  03/27/2015
 
 <h2>Output:</h2>
 compiling main.c...
-main.c(125): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(126): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+main.c(155): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(156): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
 "main.c" - 0 Errors, 2 Warning(s).
 Build target 'Target 1'
-compiling main.c...
-main.c(127): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(128): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
 linking...
-Program Size: Code=7608 RO-data=360 RW-data=72 ZI-data=1872  
+Program Size: Code=7760 RO-data=360 RW-data=72 ZI-data=1648  
+FromELF: creating hex file...
+"..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=7760 RO-data=360 RW-data=72 ZI-data=1648  
+FromELF: creating hex file...
+"..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
+Load "..\\OBJ\\Haohai_key.axf" 
+Set JLink Project File to "E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.74b, compiled Aug 19 2013 23:26:44
+Firmware: J-Link V9 compiled Dec 19 2014 16:50:53
+Hardware: V9.20
+Feature(s) : GDB, RDI, FlashBP, FlashDL, JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.296V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 5000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'Target 1'
+compiling main.c...
+main.c(155): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(156): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+linking...
+Program Size: Code=7760 RO-data=360 RW-data=72 ZI-data=1648  
 FromELF: creating hex file...
 "..\OBJ\Haohai_key.axf" - 0 Errors, 2 Warning(s).
+Load "..\\OBJ\\Haohai_key.axf" 
+Set JLink Project File to "E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.74b, compiled Aug 19 2013 23:26:44
+Firmware: J-Link V9 compiled Dec 19 2014 16:50:53
+Hardware: V9.20
+Feature(s) : GDB, RDI, FlashBP, FlashDL, JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.298V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 5000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+compiling main.c...
+main.c(155): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(156): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+"main.c" - 0 Errors, 2 Warning(s).
+compiling main.c...
+main.c(155): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(156): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+"main.c" - 0 Errors, 2 Warning(s).
 Build target 'Target 1'
 linking...
-Program Size: Code=7608 RO-data=360 RW-data=72 ZI-data=1872  
+Program Size: Code=7760 RO-data=360 RW-data=72 ZI-data=1648  
 FromELF: creating hex file...
 "..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
 Load "..\\OBJ\\Haohai_key.axf" 
@@ -50,13 +152,13 @@ ROMTableAddr = 0xE00FF003
 Target info:
 ------------
 Device: STM32F103RC
-VTarget = 3.303V
+VTarget = 3.298V
 State of Pins: 
 TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
 Software-Breakpoints: 8192
 Watchpoints:          4
-JTAG speed: 2000 kHz
+JTAG speed: 5000 kHz
  
 Full Chip Erase Done.
 Programming Done.
@@ -67,16 +169,12 @@ Verify OK.
 * JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
 Application running ...
 compiling main.c...
-main.c(127): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(128): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
-"main.c" - 0 Errors, 2 Warning(s).
-compiling main.c...
-main.c(127): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(128): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+main.c(156): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(157): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
 "main.c" - 0 Errors, 2 Warning(s).
 Build target 'Target 1'
 linking...
-Program Size: Code=7596 RO-data=360 RW-data=72 ZI-data=1872  
+Program Size: Code=7760 RO-data=360 RW-data=72 ZI-data=1648  
 FromELF: creating hex file...
 "..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
 Load "..\\OBJ\\Haohai_key.axf" 
@@ -105,108 +203,7 @@ ROMTableAddr = 0xE00FF003
 Target info:
 ------------
 Device: STM32F103RC
-VTarget = 3.306V
-State of Pins: 
-TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 5000 kHz
- 
-Full Chip Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: Found Cortex-M3 r1p1, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-Application running ...
-compiling rtc.c...
-"..\HARDWARE\RTC\rtc.c" - 0 Errors, 0 Warning(s).
-compiling main.c...
-main.c(195): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(196): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
-main.c(240): warning:  #1-D: last line of file ends without a newline
-"main.c" - 0 Errors, 3 Warning(s).
-compiling main.c...
-main.c(195): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(196): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
-"main.c" - 0 Errors, 2 Warning(s).
-Build target 'Target 1'
-compiling usart.c...
-linking...
-Program Size: Code=7956 RO-data=360 RW-data=72 ZI-data=1872  
-FromELF: creating hex file...
-"..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
-Load "..\\OBJ\\Haohai_key.axf" 
-Set JLink Project File to "E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\JLinkSettings.ini"
-* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
- 
-JLink info:
-------------
-DLL: V4.74b, compiled Aug 19 2013 23:26:44
-Firmware: J-Link V9 compiled Dec 19 2014 16:50:53
-Hardware: V9.20
-Feature(s) : GDB, RDI, FlashBP, FlashDL, JFlash 
- 
-* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
-* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
-* JLink Info: Found Cortex-M3 r1p1, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
-* JLink Info: Found Cortex-M3 r1p1, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
- 
-Target info:
-------------
-Device: STM32F103RC
-VTarget = 3.306V
-State of Pins: 
-TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
-Hardware-Breakpoints: 6
-Software-Breakpoints: 8192
-Watchpoints:          4
-JTAG speed: 5000 kHz
- 
-Full Chip Erase Done.
-Programming Done.
-Verify OK.
-* JLink Info: Found Cortex-M3 r1p1, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-Application running ...
-Load "..\\OBJ\\Haohai_key.axf" 
-Set JLink Project File to "E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\JLinkSettings.ini"
-* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
- 
-JLink info:
-------------
-DLL: V4.74b, compiled Aug 19 2013 23:26:44
-Firmware: J-Link V9 compiled Dec 19 2014 16:50:53
-Hardware: V9.20
-Feature(s) : GDB, RDI, FlashBP, FlashDL, JFlash 
- 
-* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
-* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
-* JLink Info: Found Cortex-M3 r1p1, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
-ROMTableAddr = 0xE00FF003
-* JLink Info: Found Cortex-M3 r1p1, Little endian.
-* JLink Info: TPIU fitted.
-* JLink Info: ETM fitted.
-* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
- 
-Target info:
-------------
-Device: STM32F103RC
-VTarget = 3.306V
+VTarget = 3.300V
 State of Pins: 
 TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
@@ -223,22 +220,12 @@ Verify OK.
 * JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
 Application running ...
 compiling main.c...
-main.c(54): error:  #165: too few arguments in function call
-main.c(93): error:  #165: too few arguments in function call
-main.c(139): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(140): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
-"main.c" - 2 Errors, 2 Warning(s).
-compiling main.c...
-main.c(140): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(141): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
-"main.c" - 0 Errors, 2 Warning(s).
-compiling main.c...
-main.c(135): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(136): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+main.c(158): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(159): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
 "main.c" - 0 Errors, 2 Warning(s).
 Build target 'Target 1'
 linking...
-Program Size: Code=7664 RO-data=360 RW-data=72 ZI-data=1848  
+Program Size: Code=7764 RO-data=360 RW-data=72 ZI-data=1648  
 FromELF: creating hex file...
 "..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
 Load "..\\OBJ\\Haohai_key.axf" 
@@ -284,12 +271,93 @@ Verify OK.
 * JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
 Application running ...
 compiling main.c...
-main.c(135): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(136): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+main.c(163): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(164): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+main.c(210): warning:  #223-D: function "RTC_GetITStatus" declared implicitly
+main.c(210): error:  #20: identifier "RTC_IT_ALR" is undefined
+"main.c" - 1 Errors, 3 Warning(s).
+compiling main.c...
+main.c(164): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(165): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+"main.c" - 0 Errors, 2 Warning(s).
+compiling main.c...
+main.c(166): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(167): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+"main.c" - 0 Errors, 2 Warning(s).
+compiling main.c...
+main.c(166): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(167): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+"main.c" - 0 Errors, 2 Warning(s).
+compiling main.c...
+main.c(166): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(167): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+"main.c" - 0 Errors, 2 Warning(s).
+Load "..\\OBJ\\Haohai_key.axf" 
+Set JLink Project File to "E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.74b, compiled Aug 19 2013 23:26:44
+Firmware: J-Link V9 compiled Dec 19 2014 16:50:53
+Hardware: V9.20
+Feature(s) : GDB, RDI, FlashBP, FlashDL, JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.300V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 5000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+compiling main.c...
+main.c(166): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(167): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+"main.c" - 0 Errors, 2 Warning(s).
+compiling main.c...
+main.c(166): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(167): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
 "main.c" - 0 Errors, 2 Warning(s).
 Build target 'Target 1'
 linking...
-Program Size: Code=7664 RO-data=360 RW-data=72 ZI-data=1848  
+Program Size: Code=7812 RO-data=360 RW-data=72 ZI-data=1648  
+FromELF: creating hex file...
+"..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
+compiling main.c...
+main.c(166): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(167): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+"main.c" - 0 Errors, 2 Warning(s).
+compiling main.c...
+main.c(166): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(167): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+"main.c" - 0 Errors, 2 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=7856 RO-data=360 RW-data=72 ZI-data=1648  
 FromELF: creating hex file...
 "..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
 Load "..\\OBJ\\Haohai_key.axf" 
@@ -334,14 +402,15 @@ Verify OK.
 * JLink Info: ETM fitted.
 * JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
 Application running ...
-Build target 'Target 1'
 compiling main.c...
-main.c(135): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(136): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+main.c(166): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(167): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+"main.c" - 0 Errors, 2 Warning(s).
+Build target 'Target 1'
 linking...
-Program Size: Code=7644 RO-data=360 RW-data=72 ZI-data=1848  
+Program Size: Code=7852 RO-data=360 RW-data=72 ZI-data=1648  
 FromELF: creating hex file...
-"..\OBJ\Haohai_key.axf" - 0 Errors, 2 Warning(s).
+"..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
 Load "..\\OBJ\\Haohai_key.axf" 
 Set JLink Project File to "E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\JLinkSettings.ini"
 * JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
@@ -368,7 +437,54 @@ ROMTableAddr = 0xE00FF003
 Target info:
 ------------
 Device: STM32F103RC
-VTarget = 3.296V
+VTarget = 3.298V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 5000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'Target 1'
+linking...
+Program Size: Code=7852 RO-data=360 RW-data=72 ZI-data=1648  
+FromELF: creating hex file...
+"..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
+Load "..\\OBJ\\Haohai_key.axf" 
+Set JLink Project File to "E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.74b, compiled Aug 19 2013 23:26:44
+Firmware: J-Link V9 compiled Dec 19 2014 16:50:53
+Hardware: V9.20
+Feature(s) : GDB, RDI, FlashBP, FlashDL, JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.298V
 State of Pins: 
 TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6
@@ -385,12 +501,12 @@ Verify OK.
 * JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
 Application running ...
 compiling main.c...
-main.c(135): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(136): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+main.c(166): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(167): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
 "main.c" - 0 Errors, 2 Warning(s).
 Build target 'Target 1'
 linking...
-Program Size: Code=7652 RO-data=360 RW-data=72 ZI-data=1848  
+Program Size: Code=7836 RO-data=360 RW-data=72 ZI-data=1648  
 FromELF: creating hex file...
 "..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
 Load "..\\OBJ\\Haohai_key.axf" 
@@ -436,16 +552,12 @@ Verify OK.
 * JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
 Application running ...
 compiling main.c...
-main.c(135): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(136): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
-"main.c" - 0 Errors, 2 Warning(s).
-compiling main.c...
-main.c(135): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
-main.c(136): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+main.c(167): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(168): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
 "main.c" - 0 Errors, 2 Warning(s).
 Build target 'Target 1'
 linking...
-Program Size: Code=7652 RO-data=360 RW-data=72 ZI-data=1848  
+Program Size: Code=7860 RO-data=360 RW-data=72 ZI-data=1648  
 FromELF: creating hex file...
 "..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
 Load "..\\OBJ\\Haohai_key.axf" 
@@ -474,7 +586,58 @@ ROMTableAddr = 0xE00FF003
 Target info:
 ------------
 Device: STM32F103RC
-VTarget = 3.295V
+VTarget = 3.298V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 5000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+compiling main.c...
+main.c(167): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+main.c(168): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+"main.c" - 0 Errors, 2 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=7860 RO-data=360 RW-data=72 ZI-data=1648  
+FromELF: creating hex file...
+"..\OBJ\Haohai_key.axf" - 0 Errors, 0 Warning(s).
+Load "..\\OBJ\\Haohai_key.axf" 
+Set JLink Project File to "E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103RC" selected (256 KB flash, 48 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.74b, compiled Aug 19 2013 23:26:44
+Firmware: J-Link V9 compiled Dec 19 2014 16:50:53
+Hardware: V9.20
+Feature(s) : GDB, RDI, FlashBP, FlashDL, JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103RC
+VTarget = 3.298V
 State of Pins: 
 TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
 Hardware-Breakpoints: 6

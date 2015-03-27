@@ -7,6 +7,7 @@
 #include "usart.h"
 #include "stm32f10x_pwr.h"
 #include "stm32f10x_exti.h"
+#include "stm32f10x_rtc.h"
 
 GPIO_InitTypeDef  GPIO_InitStructure;
 USART_InitTypeDef USART_InitStructure;
@@ -25,7 +26,6 @@ EXTI_InitTypeDef EXTI_InitStructure;
 #define GetKey0	GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_0)
 #define GetKey1	GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_1)
 #define GetKey2 GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_2)
-#define GetUart GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_10)
 
 //将串口配置为外部中断以便于唤醒
 void UartStop_Config(void)
@@ -52,8 +52,33 @@ void UartStop_Config(void)
 //将串口恢复的函数
 void UartRecovery_Config(void)
 {
-		uart_init(115200);
+//		uart_init(115200);
+		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10;
+		GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;//浮空输入
+		GPIO_Init(GPIOA, &GPIO_InitStructure);  //初始化PA10
+	
+		EXTI_InitStructure.EXTI_Line=EXTI_Line10;
+		EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;	
+		EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+		EXTI_InitStructure.EXTI_LineCmd = DISABLE;
+		EXTI_Init(&EXTI_InitStructure);	  	
 }
+
+void RTC_EXTI_Config(void)
+{
+		EXTI_ClearITPendingBit(EXTI_Line17);
+		EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Event;
+		EXTI_InitStructure.EXTI_Line = EXTI_Line17;
+		EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
+		EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+	
+		NVIC_InitStructure.NVIC_IRQChannel = RTCAlarm_IRQn;										//使能按键所在的外部中断通道
+		NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;					 //抢占优先级2， 
+		NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x00;					        //子优先级1
+		NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;											 //使能外部中断通道
+		NVIC_Init(&NVIC_InitStructure); 
+}
+	
 
 void RCC_wake(void)
 {
@@ -95,7 +120,8 @@ void LED_Config(void)
 
 void EXTI_Config(void)
 {
-		GPIO_EXTILineConfig(GPIO_PortSourceGPIOC, GPIO_PinSource1);			
+		GPIO_EXTILineConfig(GPIO_PortSourceGPIOC, GPIO_PinSource1);		
+	
 		EXTI_InitStructure.EXTI_Line=EXTI_Line1;
 		EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;	
 		EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
@@ -117,7 +143,9 @@ int main(void)
 		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA|RCC_APB2Periph_GPIOC|RCC_APB2Periph_GPIOD, ENABLE);
 		RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);	//使能PA,PC,PD端口时钟
 		LED_Config();
-		Key_Config();            																						  //配置PC5
+		Key_Config();  
+          																						  //配置PC5
+		EXTI_Config();
 		uart_init(115200);
 		printf("Init Uart is ok!\r\n");
 		//###################################RTC初始化########################################//
@@ -128,6 +156,10 @@ int main(void)
 			printf("RTC Trying...");	
 		}		  
 		printf("Init RTC is ok!\r\n");
+		
+		RTC_WaitForLastTask();
+		RTC_SetAlarm(RTC_GetCounter()+10);
+		RTC_EXTI_Config();
 	//#####################################外部中断#######################################//
 											
 		while(1)
@@ -145,7 +177,7 @@ int main(void)
 								RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR , ENABLE);
 								UartStop_Config();
 								PWR_WakeUpPinCmd(ENABLE);  
-								PWR_EnterSTOPMode(PWR_Regulator_LowPower,PWR_STOPEntry_WFI);											//进入停止模式
+								PWR_EnterSTOPMode(PWR_Regulator_LowPower,PWR_STOPEntry_WFE);											//进入停止模式
 						}
 				}
 		}	
@@ -176,5 +208,24 @@ void EXTI15_10_IRQHandler(void)
 				EXTI_ClearITPendingBit(EXTI_Line10);  																								//清除EXTI1线路挂起位
 		}	
 }
+
+void RTC_IRQHandler()
+{
+//		RCC_wake();
+//		UartRecovery_Config();
+//		delay_ms(5);																																			//轻微延时以避免串口丢包
+//		printf("通过RTC进入正常模式!");	
+//		EXTI_ClearITPendingBit(EXTI_Line17);
+		if(RTC_GetITStatus(RTC_IT_ALR) != RESET) 
+		{
+
+				RCC_wake();
+				UartRecovery_Config();
+				delay_ms(5);																																			//轻微延时以避免串口丢包
+				printf("通过RTC进入正常模式!");
+				EXTI_ClearITPendingBit(RTCAlarm_IRQn);  																								//清除EXTI1线路挂起位
+		}		
+}
+
 
 

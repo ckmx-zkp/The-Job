@@ -155,7 +155,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
-          <Name>/</Name>
+          <Name></Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -174,7 +174,7 @@
           <Type>0</Type>
           <LineNumber>143</LineNumber>
           <EnabledFlag>0</EnabledFlag>
-          <Address>134218590</Address>
+          <Address>134218570</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -183,14 +183,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>E:\GitHub\The-Job\脪漏潞脨V0.1-碌脥鹿娄潞脛_RTC_脥芒虏驴掳麓录眉\脪漏潞脨V0.1-碌脥鹿娄潞脛_RTC_脥芒虏驴掳麓录眉\USER\main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Haohai_key\main.c\143</Expression>
+          <Expression></Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
           <LineNumber>150</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134220842</Address>
+          <Address>134220934</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -199,14 +199,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>E:\GitHub\The-Job\脪漏潞脨V0.1-碌脥鹿娄潞脛_RTC_脥芒虏驴掳麓录眉\脪漏潞脨V0.1-碌脥鹿娄潞脛_RTC_脥芒虏驴掳麓录眉\SYSTEM\usart\usart.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Haohai_key\../SYSTEM/usart/usart.c\150</Expression>
+          <Expression></Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
           <LineNumber>64</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134220658</Address>
+          <Address>134220750</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -215,14 +215,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>E:\GitHub\The-Job\脪漏潞脨V0.1-碌脥鹿娄潞脛_RTC_脥芒虏驴掳麓录眉\脪漏潞脨V0.1-碌脥鹿娄潞脛_RTC_脥芒虏驴掳麓录眉\SYSTEM\usart\usart.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Haohai_key\../SYSTEM/usart/usart.c\64</Expression>
+          <Expression></Expression>
         </Bp>
         <Bp>
           <Number>3</Number>
           <Type>0</Type>
-          <LineNumber>175</LineNumber>
+          <LineNumber>216</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134218750</Address>
+          <Address>134218886</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -231,7 +231,23 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>E:\GitHub\The-Job\脪漏潞脨V0.1-碌脥鹿娄潞脛_RTC_脥芒虏驴掳麓录眉\脪漏潞脨V0.1-碌脥鹿娄潞脛_RTC_脥芒虏驴掳麓录眉\USER\main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\Haohai_key\main.c\175</Expression>
+          <Expression></Expression>
+        </Bp>
+        <Bp>
+          <Number>4</Number>
+          <Type>0</Type>
+          <LineNumber>160</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134218648</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>E:\GitHub\The-Job\脪漏潞脨V0.1-碌脥鹿娄潞脛_RTC_脥芒虏驴掳麓录眉\脪漏潞脨V0.1-碌脥鹿娄潞脛_RTC_脥芒虏驴掳麓录眉\USER\main.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression></Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -292,10 +308,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>63</ColumnNumber>
+      <ColumnNumber>1</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>101</TopLine>
-      <CurrentLine>126</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>210</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -462,7 +478,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>141</TopLine>
+      <TopLine>140</TopLine>
       <CurrentLine>151</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\CORE\startup_stm32f10x_hd.s</PathWithFileName>
@@ -564,10 +580,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>17</ColumnNumber>
+      <ColumnNumber>47</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>201</TopLine>
+      <CurrentLine>210</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\STM32F10x_FWLib\src\stm32f10x_rtc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f10x_rtc.c</FilenameWithoutPath>

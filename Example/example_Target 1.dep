@@ -1,0 +1,2 @@
+Dependencies for Project 'example', Target 'Target 1': (DO NOT MODIFY !)
+F (.\startup_M051Series.s)(0x51C7AFB4)(--cpu Cortex-M0 -g --apcs=interwork -I F:\Keil\ARM\RV31\INC-I F:\Keil\ARM\CMSIS\Include-I F:\Keil\ARM\Inc\Nuvoton\M051Series--list .\startup_m051series.lst --xref -o .\startup_m051series.o --depend .\startup_m051series.d)

@@ -70,19 +70,19 @@ u8 RTC_Init(void)
 //RTC时钟中断
 //每秒触发一次  
 //extern u16 tcnt; 
-void RTC_IRQHandler(void)
-{		 
-	if (RTC_GetITStatus(RTC_IT_SEC) != RESET)//秒钟中断
-	{							
-		RTC_Get();//更新时间   
- 	}
-	if(RTC_GetITStatus(RTC_IT_ALR)!= RESET)//闹钟中断
-	{
-		RTC_ClearITPendingBit(RTC_IT_ALR);		//清闹钟中断	  	   
-  } 				  								 
-	RTC_ClearITPendingBit(RTC_IT_SEC|RTC_IT_OW);		//清闹钟中断
-	RTC_WaitForLastTask();	  	    						 	   	 
-}
+//void RTC_IRQHandler(void)
+//{		 
+//	if (RTC_GetITStatus(RTC_IT_SEC) != RESET)//秒钟中断
+//	{							
+//		RTC_Get();//更新时间   
+// 	}
+//	if(RTC_GetITStatus(RTC_IT_ALR)!= RESET)//闹钟中断
+//	{
+//		RTC_ClearITPendingBit(RTC_IT_ALR);		//清闹钟中断	  	   
+//  } 				  								 
+//	RTC_ClearITPendingBit(RTC_IT_SEC|RTC_IT_OW);		//清闹钟中断
+//	RTC_WaitForLastTask();	  	    						 	   	 
+//}
 //判断是否是闰年函数
 //月份   1  2  3  4  5  6  7  8  9  10 11 12
 //闰年   31 29 31 30 31 30 31 31 30 31 30 31

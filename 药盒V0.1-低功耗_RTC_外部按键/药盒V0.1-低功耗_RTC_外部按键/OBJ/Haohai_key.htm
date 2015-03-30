@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\OBJ\Haohai_key.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\OBJ\Haohai_key.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Fri Mar 27 12:56:24 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Mar 30 09:41:36 2015
 <BR><P>
 <H3>Maximum Stack Usage =        352 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -60,8 +60,8 @@ Function Pointers
  <LI><a href="#[e]">PVD_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[b]">PendSV_Handler</a> from stm32f10x_it.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[12]">RCC_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
- <LI><a href="#[36]">RTCAlarm_IRQHandler</a> from main.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
- <LI><a href="#[10]">RTC_IRQHandler</a> from rtc.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
+ <LI><a href="#[36]">RTCAlarm_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
+ <LI><a href="#[10]">RTC_IRQHandler</a> from main.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[3]">Reset_Handler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[3e]">SDIO_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[30]">SPI1_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
@@ -272,7 +272,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTCAlarm_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_IRQHandler
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
 </UL>
 
@@ -295,7 +295,7 @@ Global Symbols
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetSYSCLKSource
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetFlagStatus
 </UL>
-<BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTCAlarm_IRQHandler
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_IRQHandler
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
 <LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI1_IRQHandler
 </UL>
@@ -327,24 +327,25 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[5c]"></a>main</STRONG> (Thumb, 228 bytes, Stack size 216 bytes, main.o(.text))
+<P><STRONG><a name="[5c]"></a>main</STRONG> (Thumb, 234 bytes, Stack size 216 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 352 + Unknown Stack Size
 <LI>Call Chain = main &rArr; UartStop_Config &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WaitForLastTask
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetAlarm
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WaitForLastTask
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetAlarm
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ClearFlag
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWR_WakeUpPinCmd
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWR_EnterSTOPMode
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWR_WakeUpPinCmd
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWR_EnterSTOPMode
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Config
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Config
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Config
@@ -360,8 +361,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_wake
 </UL>
@@ -373,19 +374,20 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_GetITStatus
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_wake
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartRecovery_Config
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
-<P><STRONG><a name="[36]"></a>RTCAlarm_IRQHandler</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, main.o(.text))
+<P><STRONG><a name="[10]"></a>RTC_IRQHandler</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
-<LI>Call Chain = RTCAlarm_IRQHandler &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
+<LI>Call Chain = RTC_IRQHandler &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetITStatus
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_ClearITPendingBit
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_wake
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartRecovery_Config
@@ -422,44 +424,43 @@ Global Symbols
 <P><STRONG><a name="[49]"></a>SystemInit</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, system_stm32f10x.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = SystemInit &rArr; SetSysClock &rArr; SetSysClockTo72
 </UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(.text)
 </UL>
 <P><STRONG><a name="[d5]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 142 bytes, Stack size 8 bytes, system_stm32f10x.o(.text), UNUSED)
 
-<P><STRONG><a name="[89]"></a>RTC_Get_Week</STRONG> (Thumb, 116 bytes, Stack size 20 bytes, rtc.o(.text))
+<P><STRONG><a name="[8b]"></a>RTC_Get_Week</STRONG> (Thumb, 116 bytes, Stack size 20 bytes, rtc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = RTC_Get_Week
 </UL>
-<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get
 </UL>
 
-<P><STRONG><a name="[88]"></a>Is_Leap_Year</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, rtc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get
+<P><STRONG><a name="[8a]"></a>Is_Leap_Year</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, rtc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get
 </UL>
 
-<P><STRONG><a name="[87]"></a>RTC_Get</STRONG> (Thumb, 240 bytes, Stack size 16 bytes, rtc.o(.text))
+<P><STRONG><a name="[89]"></a>RTC_Get</STRONG> (Thumb, 240 bytes, Stack size 16 bytes, rtc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = RTC_Get &rArr; RTC_Get_Week
 </UL>
-<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Is_Leap_Year
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get_Week
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Is_Leap_Year
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get_Week
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetCounter
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_IRQHandler
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
+<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
-<P><STRONG><a name="[8a]"></a>RTC_Set</STRONG> (Thumb, 188 bytes, Stack size 40 bytes, rtc.o(.text))
+<P><STRONG><a name="[8c]"></a>RTC_Set</STRONG> (Thumb, 188 bytes, Stack size 40 bytes, rtc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = RTC_Set &rArr; RTC_Get &rArr; RTC_Get_Week
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetCounter
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWR_BackupAccessCmd
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Is_Leap_Year
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WaitForLastTask
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
+<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetCounter
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWR_BackupAccessCmd
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Is_Leap_Year
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WaitForLastTask
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
@@ -467,39 +468,29 @@ Global Symbols
 <P><STRONG><a name="[7a]"></a>RTC_Init</STRONG> (Thumb, 190 bytes, Stack size 16 bytes, rtc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = RTC_Init &rArr; RTC_Set &rArr; RTC_Get &rArr; RTC_Get_Week
 </UL>
-<BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WaitForSynchro
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetPrescaler
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ITConfig
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ExitConfigMode
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterConfigMode
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_RTCCLKConfig
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_RTCCLKCmd
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSEConfig
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWR_BackupAccessCmd
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BKP_WriteBackupRegister
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BKP_ReadBackupRegister
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BKP_DeInit
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_NVIC_Config
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WaitForSynchro
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetPrescaler
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ITConfig
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ExitConfigMode
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterConfigMode
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_RTCCLKConfig
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_RTCCLKCmd
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_LSEConfig
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWR_BackupAccessCmd
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BKP_WriteBackupRegister
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BKP_ReadBackupRegister
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BKP_DeInit
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_NVIC_Config
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WaitForLastTask
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WaitForLastTask
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetFlagStatus
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphClockCmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[10]"></a>RTC_IRQHandler</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, rtc.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = RTC_IRQHandler &rArr; RTC_Get &rArr; RTC_Get_Week
-</UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_GetITStatus
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ClearITPendingBit
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_WaitForLastTask
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
-</UL>
 <P><STRONG><a name="[76]"></a>delay_init</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, delay.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delay_init
 </UL>
@@ -512,7 +503,7 @@ Global Symbols
 
 <P><STRONG><a name="[79]"></a>delay_ms</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, delay.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
-<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTCAlarm_IRQHandler
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_IRQHandler
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
 <LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI1_IRQHandler
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -639,6 +630,9 @@ Global Symbols
 <P><STRONG><a name="[12]"></a>RCC_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
+<P><STRONG><a name="[36]"></a>RTCAlarm_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
 <P><STRONG><a name="[3e]"></a>SDIO_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
@@ -729,7 +723,7 @@ Global Symbols
 <P><STRONG><a name="[67]"></a>NVIC_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, misc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NVIC_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_NVIC_Config
+<BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_NVIC_Config
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI_Config
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EXTI_Config
@@ -764,7 +758,7 @@ Global Symbols
 
 <P><STRONG><a name="[da]"></a>GPIO_StructInit</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[7f]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text))
+<P><STRONG><a name="[7c]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI1_IRQHandler
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -854,17 +848,17 @@ Global Symbols
 
 <P><STRONG><a name="[ef]"></a>RCC_ADCCLKConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[8f]"></a>RCC_LSEConfig</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text))
+<P><STRONG><a name="[91]"></a>RCC_LSEConfig</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
 <P><STRONG><a name="[f0]"></a>RCC_LSICmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[90]"></a>RCC_RTCCLKConfig</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text))
+<P><STRONG><a name="[92]"></a>RCC_RTCCLKConfig</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
-<P><STRONG><a name="[91]"></a>RCC_RTCCLKCmd</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text))
+<P><STRONG><a name="[93]"></a>RCC_RTCCLKCmd</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
@@ -881,8 +875,8 @@ Global Symbols
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[80]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
+<P><STRONG><a name="[7d]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -899,7 +893,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[a5]"></a>RCC_BackupResetCmd</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BKP_DeInit
+<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BKP_DeInit
 </UL>
 
 <P><STRONG><a name="[f2]"></a>RCC_ClockSecuritySystemCmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
@@ -993,82 +987,81 @@ Global Symbols
 
 <P><STRONG><a name="[10e]"></a>USART_ClearITPendingBit</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[93]"></a>RTC_ITConfig</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
+<P><STRONG><a name="[95]"></a>RTC_ITConfig</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
-<P><STRONG><a name="[94]"></a>RTC_EnterConfigMode</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetPrescaler
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetCounter
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetAlarm
+<P><STRONG><a name="[96]"></a>RTC_EnterConfigMode</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetPrescaler
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetCounter
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetAlarm
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
-<P><STRONG><a name="[96]"></a>RTC_ExitConfigMode</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetPrescaler
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetCounter
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetAlarm
+<P><STRONG><a name="[98]"></a>RTC_ExitConfigMode</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetPrescaler
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetCounter
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_SetAlarm
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
-<P><STRONG><a name="[7c]"></a>RTC_GetCounter</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get
+<P><STRONG><a name="[80]"></a>RTC_GetCounter</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Get
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8c]"></a>RTC_SetCounter</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, stm32f10x_rtc.o(.text))
+<P><STRONG><a name="[8e]"></a>RTC_SetCounter</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, stm32f10x_rtc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = RTC_SetCounter
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ExitConfigMode
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterConfigMode
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ExitConfigMode
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterConfigMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
+<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
 </UL>
 
-<P><STRONG><a name="[95]"></a>RTC_SetPrescaler</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, stm32f10x_rtc.o(.text))
+<P><STRONG><a name="[97]"></a>RTC_SetPrescaler</STRONG> (Thumb, 28 bytes, Stack size 4 bytes, stm32f10x_rtc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = RTC_SetPrescaler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ExitConfigMode
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterConfigMode
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ExitConfigMode
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterConfigMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
-<P><STRONG><a name="[7d]"></a>RTC_SetAlarm</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, stm32f10x_rtc.o(.text))
+<P><STRONG><a name="[81]"></a>RTC_SetAlarm</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, stm32f10x_rtc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = RTC_SetAlarm
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ExitConfigMode
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterConfigMode
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_ExitConfigMode
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EnterConfigMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[10f]"></a>RTC_GetDivider</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text), UNUSED)
 
-<P><STRONG><a name="[7b]"></a>RTC_WaitForLastTask</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_IRQHandler
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
+<P><STRONG><a name="[7f]"></a>RTC_WaitForLastTask</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[92]"></a>RTC_WaitForSynchro</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
+<P><STRONG><a name="[94]"></a>RTC_WaitForSynchro</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
 <P><STRONG><a name="[110]"></a>RTC_GetFlagStatus</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text), UNUSED)
 
-<P><STRONG><a name="[111]"></a>RTC_ClearFlag</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text), UNUSED)
+<P><STRONG><a name="[82]"></a>RTC_ClearFlag</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
 
-<P><STRONG><a name="[98]"></a>RTC_GetITStatus</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
+<P><STRONG><a name="[85]"></a>RTC_GetITStatus</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_IRQHandler
 </UL>
 
-<P><STRONG><a name="[99]"></a>RTC_ClearITPendingBit</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_IRQHandler
-</UL>
+<P><STRONG><a name="[111]"></a>RTC_ClearITPendingBit</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f10x_rtc.o(.text), UNUSED)
 
-<P><STRONG><a name="[8e]"></a>BKP_DeInit</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, stm32f10x_bkp.o(.text))
+<P><STRONG><a name="[90]"></a>BKP_DeInit</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, stm32f10x_bkp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BKP_DeInit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_BackupResetCmd
@@ -1086,13 +1079,13 @@ Global Symbols
 
 <P><STRONG><a name="[116]"></a>BKP_SetRTCCalibrationValue</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, stm32f10x_bkp.o(.text), UNUSED)
 
-<P><STRONG><a name="[97]"></a>BKP_WriteBackupRegister</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32f10x_bkp.o(.text))
+<P><STRONG><a name="[99]"></a>BKP_WriteBackupRegister</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32f10x_bkp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BKP_WriteBackupRegister
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
-<P><STRONG><a name="[8d]"></a>BKP_ReadBackupRegister</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, stm32f10x_bkp.o(.text))
+<P><STRONG><a name="[8f]"></a>BKP_ReadBackupRegister</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, stm32f10x_bkp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BKP_ReadBackupRegister
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
@@ -1110,8 +1103,8 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphResetCmd
 </UL>
 
-<P><STRONG><a name="[8b]"></a>PWR_BackupAccessCmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_pwr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
+<P><STRONG><a name="[8d]"></a>PWR_BackupAccessCmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_pwr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Set
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_Init
 </UL>
 
@@ -1119,11 +1112,11 @@ Global Symbols
 
 <P><STRONG><a name="[11c]"></a>PWR_PVDLevelConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_pwr.o(.text), UNUSED)
 
-<P><STRONG><a name="[81]"></a>PWR_WakeUpPinCmd</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_pwr.o(.text))
+<P><STRONG><a name="[7e]"></a>PWR_WakeUpPinCmd</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_pwr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[82]"></a>PWR_EnterSTOPMode</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, stm32f10x_pwr.o(.text))
+<P><STRONG><a name="[83]"></a>PWR_EnterSTOPMode</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, stm32f10x_pwr.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = PWR_EnterSTOPMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -1151,13 +1144,13 @@ Global Symbols
 
 <P><STRONG><a name="[124]"></a>EXTI_ClearFlag</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_exti.o(.text), UNUSED)
 
-<P><STRONG><a name="[83]"></a>EXTI_GetITStatus</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, stm32f10x_exti.o(.text))
+<P><STRONG><a name="[84]"></a>EXTI_GetITStatus</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, stm32f10x_exti.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
 <LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI1_IRQHandler
 </UL>
 
 <P><STRONG><a name="[6a]"></a>EXTI_ClearITPendingBit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_exti.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTCAlarm_IRQHandler
+<BR><BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_IRQHandler
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
 <LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI1_IRQHandler
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_EXTI_Config
@@ -1172,14 +1165,14 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
 </UL>
 <BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
-<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTCAlarm_IRQHandler
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_IRQHandler
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI15_10_IRQHandler
 <LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EXTI1_IRQHandler
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartStop_Config
 </UL>
 
-<P><STRONG><a name="[7e]"></a>__2sprintf</STRONG> (Thumb, 34 bytes, Stack size 32 bytes, noretval__2sprintf.o(.text))
+<P><STRONG><a name="[7b]"></a>__2sprintf</STRONG> (Thumb, 34 bytes, Stack size 32 bytes, noretval__2sprintf.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120 + Unknown Stack Size
 <LI>Call Chain = __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -1235,11 +1228,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 
 <P><STRONG><a name="[4b]"></a>_sputc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, _sputc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
+<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> noretval__2sprintf.o(.text)
 </UL>
@@ -1305,21 +1298,21 @@ Global Symbols
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[85]"></a>SetSysClockTo72</STRONG> (Thumb, 212 bytes, Stack size 12 bytes, system_stm32f10x.o(.text))
+<P><STRONG><a name="[87]"></a>SetSysClockTo72</STRONG> (Thumb, 212 bytes, Stack size 12 bytes, system_stm32f10x.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SetSysClockTo72
 </UL>
-<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
 </UL>
 
-<P><STRONG><a name="[84]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(.text))
+<P><STRONG><a name="[86]"></a>SetSysClock</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, system_stm32f10x.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SetSysClock &rArr; SetSysClockTo72
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
+<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo72
 </UL>
 <BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
 </UL>
 
-<P><STRONG><a name="[86]"></a>RTC_NVIC_Config</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, rtc.o(.text))
+<P><STRONG><a name="[88]"></a>RTC_NVIC_Config</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, rtc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = RTC_NVIC_Config &rArr; NVIC_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init

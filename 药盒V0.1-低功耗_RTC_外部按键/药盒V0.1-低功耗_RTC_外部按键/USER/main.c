@@ -69,7 +69,7 @@ void RTC_EXTI_Config(void)
 		EXTI_ClearITPendingBit(EXTI_Line17);
 		EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Event;
 		EXTI_InitStructure.EXTI_Line = EXTI_Line17;
-		EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising;
+		EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
 		EXTI_InitStructure.EXTI_LineCmd = ENABLE;
 	
 		NVIC_InitStructure.NVIC_IRQChannel = RTCAlarm_IRQn;										//使能按键所在的外部中断通道
@@ -157,9 +157,7 @@ int main(void)
 		}		  
 		printf("Init RTC is ok!\r\n");
 		
-		RTC_WaitForLastTask();
-		RTC_SetAlarm(RTC_GetCounter()+10);
-		RTC_EXTI_Config();
+
 	//#####################################外部中断#######################################//
 											
 		while(1)
@@ -177,6 +175,10 @@ int main(void)
 								RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR , ENABLE);
 								UartStop_Config();
 								PWR_WakeUpPinCmd(ENABLE);  
+								RTC_WaitForLastTask();
+								RTC_SetAlarm(RTC_GetCounter()+20);
+								RTC_EXTI_Config();
+								RTC_ClearFlag(RTC_FLAG_SEC);
 								PWR_EnterSTOPMode(PWR_Regulator_LowPower,PWR_STOPEntry_WFE);											//进入停止模式
 						}
 				}

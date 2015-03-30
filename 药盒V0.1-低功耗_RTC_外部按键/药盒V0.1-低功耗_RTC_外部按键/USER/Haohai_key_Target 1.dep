@@ -1,5 +1,5 @@
 Dependencies for Project 'Haohai_key', Target 'Target 1': (DO NOT MODIFY !)
-F (.\main.c)(0x5514CB15)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\TIMER -I..\HARDWARE\RTC-I F:\Keil\ARM\RV31\INC-I F:\Keil\ARM\CMSIS\Include-I Device\Include-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x5514E4B3)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\TIMER -I..\HARDWARE\RTC-I F:\Keil\ARM\RV31\INC-I F:\Keil\ARM\CMSIS\Include-I Device\Include-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\HARDWARE\LED\led.h)(0x532ACAF6)
 I (E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\SYSTEM\sys\sys.h)(0x5055B57C)
 I (E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\stm32f10x.h)(0x4D783CB4)
@@ -19,6 +19,7 @@ I (F:\Keil\ARM\ARMCC\include\stdio.h)(0x51C7B744)
 I (E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\SYSTEM\usart\usart.h)(0x50513AC4)
 I (E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\STM32F10x_FWLib\inc\stm32f10x_pwr.h)(0x4D783BB4)
 I (E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\STM32F10x_FWLib\inc\stm32f10x_exti.h)(0x4D783BB4)
+I (E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\STM32F10x_FWLib\inc\stm32f10x_rtc.h)(0x4D783BB4)
 F (.\stm32f10x_it.c)(0x4EBEACB0)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\HARDWARE\LED -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\USER -I..\STM32F10x_FWLib\inc -I..\CORE -I..\HARDWARE\TIMER -I..\HARDWARE\RTC-I F:\Keil\ARM\RV31\INC-I F:\Keil\ARM\CMSIS\Include-I Device\Include-DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o ..\obj\stm32f10x_it.o --omf_browse ..\obj\stm32f10x_it.crf --depend ..\obj\stm32f10x_it.d)
 I (E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\stm32f10x_it.h)(0x4D99A426)
 I (E:\GitHub\The-Job\药盒V0.1-低功耗_RTC_外部按键\药盒V0.1-低功耗_RTC_外部按键\USER\stm32f10x.h)(0x4D783CB4)
